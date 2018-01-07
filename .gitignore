@@ -1,3 +1,7 @@
+bin
+lib
+include
+pip-selfcheck.json
 venv
 *.pyc
 staticfiles
