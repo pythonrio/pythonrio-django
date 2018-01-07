@@ -1,15 +1,15 @@
-# pythonrio-django-2
+# pythonrio-django
 
 Essa é a nova versão do site da pythonrio, baseado no projeto 'python_getting_started' do heroku.
 
 ## Rodando localmente
 
-Como usamos django 2, você precisa ter o python 3.6 ou superior instalado na sua máquina e o postgres (dependência do heroku).
-Depois de clonar o projeto (`git clone https://github.com/lucianoratamero/pythonrio-django-2.git`), você deve instalar uma virtualenv e ativá-la:
+Antes de tudo, você precisa ter o portgres (dependência do heroku) o python 3.6 ou superior instalado na sua máquina.
+Depois de clonar o projeto (`git clone https://github.com/lucianoratamero/pythonrio-django.git`), você deve instalar uma virtualenv e ativá-la:
 
 ```sh
-python -m virtualenv pythonrio-django-2
-cd pythonrio-django-2
+python -m virtualenv pythonrio-django
+cd pythonrio-django
 source bin/activate
 ```
 
