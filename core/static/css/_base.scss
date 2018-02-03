@@ -1,4 +1,11 @@
 
+body {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+a { text-decoration: underline; }
+
 .navbar-default.on {
   background-color: #FFFFFF;
   padding: 0;
@@ -15,5 +22,18 @@
   }
 }
 
+#social {
+  padding: 4em 0;
+
+  ul { padding: 0; }
+  li {
+    font-size: 2em;
+    display: inline-block;
+    margin: 0 20px;
+  }
+}
+
 .absolute-center { @include absolute-center; }
 .text-center { text-align: center; }
+.bg-gray-lighter { background-color: $gray-lighter; }
+.mb-4-em { margin-bottom: 4em; }
