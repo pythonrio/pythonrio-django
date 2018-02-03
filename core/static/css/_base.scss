@@ -1,0 +1,16 @@
+
+.navbar-default.on {
+  background-color: #FFFFFF;
+  padding: 0;
+  border-bottom: 1px solid #eee;
+  height: 40px;
+  min-height: 40px;
+
+  .navbar-brand {
+    height: 40px;
+    > img {
+      height: 20px;
+      margin-top: 10px;
+    }
+  }
+}
