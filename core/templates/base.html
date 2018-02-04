@@ -23,12 +23,19 @@
 
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav id="base-navbar" class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="{% url 'index' %}">
         <img src="{% static 'img/logo-pythonrio.png' %}" alt="Logo PythOnRio">
       </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Home</a></li>
+        <li><a href="{% url "eventos" %}">Eventos</a></li>
+        <li><a href="/#social">Contato/Social</a></li>
+      </ul>
     </div>
   </div>
 </nav>
@@ -36,18 +43,23 @@
   {% block content %}
   {% endblock %}
 
-  <div id="social">
+  <div id="social" class="seção">
     <div class="container">
-      <div class="social">
-        <ul>
-          <li><a href="https://www.facebook.com/pythonrio"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://www.twitter.com/pythonrio"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="https://telegram.me/PythonRio"><i class="fa fa-telegram"></i></a></li>
-          <li><a href="https://github.com/pythonrio"><i class="fa fa-github"></i></a></li>
-          <li><a href="https://www.youtube.com/channel/UCGl4xDZYUYGg4_aMah32yjQ"><i class="fa fa-youtube"></i></a></li>
-          <li><a href="mailto:pythonrio.contato@gmail.com"><i class="fa fa-envelope"></i></a></li>
-        </ul>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Contato/Social</h2>
+          <hr />
+        </div>
       </div>
+      <ul>
+        <li><a href="https://www.facebook.com/pythonrio"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.twitter.com/pythonrio"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://telegram.me/PythonRio"><i class="fa fa-telegram"></i></a></li>
+        <li><a href="https://github.com/pythonrio"><i class="fa fa-github"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UCGl4xDZYUYGg4_aMah32yjQ"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="mailto:pythonrio.contato@gmail.com"><i class="fa fa-envelope"></i></a></li>
+      </ul>
     </div>
   </div>
 
