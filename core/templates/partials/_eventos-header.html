@@ -4,7 +4,11 @@
       <div class="absolute-center">
         <div class="text-center">
           <h1>{{ evento_atual.nome }}</h1>
-          <h2>{{ evento_atual.local }} - {{ evento_atual.cidade }}</h2>
+          <h2>
+            {{ evento_atual.local }} - {{ evento_atual.cidade }}
+            <br />
+            {{ evento_atual.data }}
+          </h2>
           <div class="clearfix"></div>
           <a href="{{ evento_atual.meetup_link|default:"#" }}" class="btn btn-default btn-lg">Inscreva-se</a>
         </div>
