@@ -1,4 +1,5 @@
 {% load pipeline %}
+{% load static %}
 
 <!doctype html>
 
@@ -7,8 +8,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>{% block title %}{% endblock %}</title>
+  <title>{% block title %}Meetup PythOnRio{% endblock %}</title>
   <meta name="description" content="{% block description %}{% endblock %}">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   {% stylesheet "main" %}
 
@@ -19,9 +23,58 @@
 
 <body>
 
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <img src="{% static 'img/logo-pythonrio.png' %}" alt="Logo PythOnRio">
+      </a>
+    </div>
+  </div>
+</nav>
+
   {% block content %}
   {% endblock %}
 
+  <div id="social">
+    <div class="container">
+      <div class="social">
+        <ul>
+          <li><a href="https://www.facebook.com/pythonrio"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.twitter.com/pythonrio"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://telegram.me/PythonRio"><i class="fa fa-telegram"></i></a></li>
+          <li><a href="https://github.com/pythonrio"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCGl4xDZYUYGg4_aMah32yjQ"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="mailto:pythonrio.contato@gmail.com"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
+  {% javascript "main" %}
+  {% block extra-js %}{% endblock %}
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var fixMenuOnTop = function(){
+        var navHeight = 80;
+        if ($(window).scrollTop() > navHeight) {
+          $('.navbar-default').addClass('on');
+        } else {
+          $('.navbar-default').removeClass('on');
+        }
+      };
+
+      fixMenuOnTop();
+      $(window).bind('scroll', function() {
+        fixMenuOnTop();
+      });
+
+      $('body').scrollspy({
+        target: '.navbar-default',
+        offset: 80
+      })
+    })
+  </script>
 </body>
 </html>

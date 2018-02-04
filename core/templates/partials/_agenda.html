@@ -1,0 +1,23 @@
+
+<div id="agenda" class="seção bg-gray-lighter">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Agenda</h2>
+        <hr />
+      </div>
+    </div>
+
+    <div class="row">
+      {% for evento in eventos %}
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <h2>{{ evento.data }}</h2>
+          <h3>{{ evento.local }}</h3>
+          <h4>{{ evento.cidade }}</h4>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>

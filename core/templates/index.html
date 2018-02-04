@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-  {% for evento in eventos %}
-    <h1>
-      {{ evento.data }}, {{ evento.local }} - {{ evento.cidade }}
-    </h1>
-  {% endfor %}
+  <div id="index">
+
+    {% include "partials/_main-header.html" %}
+
+    {% include "partials/_sobre.html" %}
+
+    {% include "partials/_projetos.html" %}
+
+    {% include "partials/_agenda.html" %}
+
+  </div>
 {% endblock %}
