@@ -1,8 +1,8 @@
 {
-  "name": "pythonrio django 2",
-  "description": "Novo site da pythonrio, baseado em django 2.",
+  "name": "pythonrio django",
+  "description": "Novo site da pythonrio.",
   "image": "heroku/python",
-  "repository": "https://github.com/lucianoratamero/pythonrio-django-2",
+  "repository": "https://github.com/lucianoratamero/pythonrio-django",
   "keywords": ["python", "django" ],
   "addons": [ "heroku-postgresql" ],
   "env": {

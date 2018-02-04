@@ -1,2 +1,11 @@
-body {
-}
+
+@import "./_bootstrap-config";
+@import "../bootstrap/stylesheets/_bootstrap";
+
+@import "./_overrides";
+@import "./_mixins";
+
+@import "./_base";
+
+@import "./page-specific/_index";
+@import "./page-specific/_eventos";

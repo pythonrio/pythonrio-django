@@ -1,0 +1,156 @@
+
+body {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+a { text-decoration: underline; }
+
+#base-navbar {
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    &:hover { color: $brand-primary; }
+  }
+
+  &.navbar-default.on {
+    color: $gray-darker;
+    background-color: #FFFFFF;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+    height: 40px;
+    min-height: 40px;
+
+    a {
+      color: $brand-primary;
+      padding: 10px 15px;
+      &:hover { color: $gray-darker; }
+    }
+
+    .navbar-brand {
+      height: 40px;
+      > img {
+        height: 20px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    color: $gray-darker;
+    background-color: #FFFFFF;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+    height: 40px;
+    min-height: 40px;
+
+    .navbar-header {
+      float: left;
+    }
+
+    a {
+      color: $brand-primary;
+      padding: 10px 15px;
+      &:hover { color: $gray-darker; }
+    }
+
+    .mobile-menu {
+      padding-top: 10px;
+    }
+
+    .navbar-brand {
+      height: 40px;
+      > img {
+        height: 20px;
+        margin-top: 0;
+      }
+    }
+  }
+
+}
+
+.main-header {
+  min-height: 60vh;
+  background-image: url('/static/img/cover.jpg');
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  margin: 0;
+
+  .absolute-center { width: 100%; }
+
+  h1, p {
+    color: #fff;
+    span { color: $brand-primary; }
+  }
+
+  h1 { font-weight: bold; }
+  h2{
+    background-color: #1c3b56;
+    padding: 10px 0;
+  }
+
+  p { text-shadow: 0px 2px 2px $brand-primary; }
+  a { margin-top: 1em; }
+}
+
+.seção {
+  &:nth-child(odd) {
+    background-color: $gray-lighter;
+  }
+
+  > * {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+
+  h2 {
+    color: $gray-dark;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  h4 {
+    display: inline-block;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $brand-primary;
+  }
+
+  hr {
+    height: 2px;
+    width: 60px;
+    background: $brand-primary;
+    position: relative;
+    border: 0;
+    margin: 30px 0 0 0;
+  }
+
+  p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  i {
+    color: $brand-primary;
+    padding-bottom: 10px;
+    display: block;
+    font-size: 36px;
+  }
+}
+
+
+#social {
+  a { text-decoration: none; }
+  ul { margin-top: 4em; text-align: center; padding: 0; }
+  li {
+    font-size: 2em;
+    display: inline-block;
+    padding: 0 20px;
+  }
+}
+
+.absolute-center { @include absolute-center; }
+.text-center { text-align: center; }
+.bg-gray-lighter { background-color: $gray-lighter; }
+.mb-4-em { margin-bottom: 4em; }

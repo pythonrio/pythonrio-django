@@ -1,0 +1,29 @@
+
+<div id="eventos-parceiros" class="seção">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12 mb-4-em">
+        <h2>Parceiros</h2>
+        <hr/>
+      </div>
+    </div>
+
+    <div class="row">
+      {% for parceiro in evento_atual.parceiros.all %}
+        <div class="parceiro col-xs-12 col-sm-6 col-md-4">
+          <a href="{{ parceiro.link }}">
+            <img src="{{ parceiro.logo_url }}" title="{{ parceiro.nome }}">
+          </a>
+        </div>
+      {% empty %}
+        <div class="col-xs-12">
+          <p>
+            Ainda não temos parceiros para este evento! Entre em <a href="#social">contato com a gente</a> caso queira nos ajudar a realizar este evento.
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
