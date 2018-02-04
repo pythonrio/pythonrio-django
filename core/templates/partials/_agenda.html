@@ -1,5 +1,5 @@
 
-<div id="agenda" class="seção bg-gray-lighter">
+<div id="agenda" class="seção">
   <div class="container">
 
     <div class="row">
@@ -15,6 +15,12 @@
           <h2>{{ evento.data }}</h2>
           <h3>{{ evento.local }}</h3>
           <h4>{{ evento.cidade }}</h4>
+        </div>
+      {% empty %}
+        <div class="col-xs-12">
+          <p>
+            Não temos nenhum evento futuro agendado.
+          </p>
         </div>
       {% endfor %}
     </div>

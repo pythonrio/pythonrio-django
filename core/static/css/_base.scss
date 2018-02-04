@@ -64,6 +64,9 @@ a { text-decoration: underline; }
 }
 
 .seção {
+  &:nth-child(odd) {
+    background-color: $gray-lighter;
+  }
 
   > * {
     padding: 4em 0;
