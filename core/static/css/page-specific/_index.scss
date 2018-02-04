@@ -1,26 +1,6 @@
 
 #index {
 
-  #main-header {
-    min-height: 60vh;
-    background-image: url('/static/img/cover.jpg');
-    background-size: cover;
-    background-position: bottom;
-    position: relative;
-    margin: 0;
-
-    .absolute-center { width: 100%; }
-
-    h1, p {
-      color: #fff;
-      span { color: $brand-primary; }
-    }
-
-    h1 { font-weight: bold; }
-
-    p { text-shadow: 0px 2px 2px $brand-primary; }
-  }
-
   #projetos, #agenda {
     hr { margin-bottom: 4em }
   }
