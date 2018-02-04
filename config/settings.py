@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'markdownx',
     'pipeline',
     'core',
 ]
@@ -131,6 +132,9 @@ PIPELINE['COMPILERS'] = ('libsasscompiler.LibSassCompiler',)
 PIPELINE['CSS_COMPRESSOR'] = 'pipeline.compressors.yuglify.YuglifyCompressor'
 PIPELINE['JS_COMPRESSOR'] = 'pipeline.compressors.yuglify.YuglifyCompressor'
 
+MARKDOWNX_MARKDOWN_EXTENSIONS = [
+    'markdown.extensions.extra'
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/

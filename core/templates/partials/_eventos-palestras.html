@@ -1,0 +1,31 @@
+
+{% if evento_atual.palestras_link %}
+
+  <div class="seção">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12 mb-4-em">
+          <h2>Palestras</h2>
+          <hr/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          {% if not evento_atual.palestras_estao_fechadas %}
+            <p>
+              Para submeter ou votar em uma palestra, <a href="{{ evento_atual.palestras_link }}">clique aqui</a>.
+            </p>
+          {% else %}
+            <p>
+              O período para envio de palestras já acabou. Confira a agenda do evento!
+            </p>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% endif %}
