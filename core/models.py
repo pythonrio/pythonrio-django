@@ -17,6 +17,15 @@ AGENDA_DEFAULT = '''Hora | Local | Atividade
 18:00|No bar mais próximo, vamos trocar ideias e beber um chopp.|Pós-evento'''
 
 
+class Parceiro(models.Model):
+    logo_url = models.URLField()
+    link = models.URLField()
+    nome = models.CharField(max_length=255)
+
+    def __str__(self):
+        return 'Parceiro: {}'.format(self.nome)
+
+
 class Evento(models.Model):
     nome = models.CharField(max_length=255, default="PythOnRio")
     descrição = MarkdownxField()
@@ -27,7 +36,8 @@ class Evento(models.Model):
     data = models.DateTimeField()
     data_fechamento_palestras = models.DateTimeField(null=True, blank=True)
     local = models.CharField(max_length=255)
-    cidade = models.CharField(max_length=255, default="Rio de Janeiro")
+    cidade = models.CharField(max_length=255, default="Riode Janeiro")
+    parceiros = models.ManyToManyField(Parceiro, blank=True)
 
     @property
     def palestras_estao_fechadas(self):
