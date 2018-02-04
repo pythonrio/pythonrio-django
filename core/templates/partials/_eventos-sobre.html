@@ -1,0 +1,21 @@
+{% load markdown %}
+
+
+<div class="seção bg-gray-lighter">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12 mb-4-em">
+        <h2>Sobre o próximo evento</h2>
+        <hr/>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        {{ evento_atual.descrição|render_markdown|safe }}
+      </div>
+    </div>
+
+  </div>
+</div>
