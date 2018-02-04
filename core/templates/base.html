@@ -16,6 +16,8 @@
 
   {% stylesheet "main" %}
 
+  {% javascript "main" %}
+
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -62,9 +64,6 @@
     </div>
   </div>
 
-  {% javascript "main" %}
-  {% block extra-js %}{% endblock %}
-
   <script type="text/javascript">
     $(document).ready(function(){
       var fixMenuOnTop = function(){
@@ -87,5 +86,6 @@
       })
     })
   </script>
+  {% block extra-js %}{% endblock %}
 </body>
 </html>
