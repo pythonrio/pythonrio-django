@@ -1,6 +1,7 @@
+from datetime import datetime
+
 from django.db import models
 from markdownx.models import MarkdownxField
-
 
 AGENDA_DEFAULT = '''Hora | Local | Atividade
 --- | --- | ---
@@ -27,3 +28,7 @@ class Evento(models.Model):
     data_fechamento_palestras = models.DateTimeField(null=True, blank=True)
     local = models.CharField(max_length=255)
     cidade = models.CharField(max_length=255, default="Rio de Janeiro")
+
+    @property
+    def palestras_estao_fechadas(self):
+        return self.data_fechamento_palestras < datetime.now()
