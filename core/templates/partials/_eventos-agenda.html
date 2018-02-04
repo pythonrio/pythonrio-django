@@ -1,0 +1,21 @@
+{% load markdown %}
+
+
+<div id="eventos-agenda" class="seção bg-gray-lighter">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12 mb-4-em">
+        <h2>Agenda</h2>
+        <hr/>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        {{ evento_atual.agenda|render_markdown|add_class:"table table-striped" }}
+      </div>
+    </div>
+
+  </div>
+</div>
