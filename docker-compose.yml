@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  pythonrio-db:
+    image: postgres:10.2-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=adminpass
+      - POSTGRES_DB=pythonrio
+
+  pythonrio:
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - pythonrio-db
+    env_file: .env
